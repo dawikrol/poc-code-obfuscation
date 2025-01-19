@@ -2,6 +2,8 @@
 
 This repository demonstrates how to use PyArmor to obfuscate a FastAPI application. It includes both local and Docker-based deployment options for both regular and obfuscated versions of the application.
 
+Obfuscation is a technique that transforms source code into a less human-readable form while maintaining its functionality, primarily to protect intellectual property and sensitive logic. PyArmor achieves this by encrypting Python scripts, wrapping them in a runtime that validates the execution environment. 
+
 ## Prerequisites
 
 - Python 3.11+
@@ -75,15 +77,22 @@ make clean
 - `GET /health`: Health check endpoint
 - Swagger UI available at `/docs`
 
-## Development vs Production
+## My Notes
 
-- For development, use `run-local-app` or `run-docker-app`
-- For production-like testing with obfuscation:
-  - Local: `run-local-obfuscated-app`
-  - Docker: `run-docker-obfuscated-app`
+After purchasing a license, more advanced security options become available. However, these options might not always work seamlessly with your environment. Consider the following:  
+- Some Python libraries may encounter issues functioning after obfuscation.  
+- Certain environments might face compatibility problems.  
 
-## Notes
+Therefore, it is crucial to test your application first to ensure it operates correctly under these advanced security measures.
 
-- The obfuscated version generates OS-specific binaries
-- For cross-platform deployment, use the Docker-based obfuscated version
-- Local obfuscation is mainly for testing purposes
+The obfuscated version generates OS-specific binaries. For cross-platform deployment, use the Docker-based obfuscated version.
+
+Make sure that your pyarmor runtime is in the correct place. ;)
+
+## Useful links
+- [PyArmor Docs](https://pyarmor.readthedocs.io/en/latest/)
+- [PyArmor Repo](https://github.com/dashingsoft/pyarmor)
+- [PyArmo Website](https://pyarmor.dashingsoft.com/)
+
+## Author
+[Dawid Krol](https://www.linkedin.com/in/krol-dawid/)

@@ -29,6 +29,6 @@ run-docker-app: docker-build
 run-docker-obfuscated-app: docker-build
 	docker-compose up app-obfuscated
 
-docker-clean:
+clean:
 	docker-compose down -v
 	rm -rf dist
