@@ -1,0 +1,4 @@
+fastapi
+pyarmor==9.0.7
+uvicorn
+pydantic
